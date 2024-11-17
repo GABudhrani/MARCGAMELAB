@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Game Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- <link rel="script" href="js/style.js"> -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo" style="height: 10vh; width: auto;">
+                </a>
+            </div>
+            
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="booking">
+            <div class="content_home">
+                <h1 style="text-align: center;">Tournament Booking / PS Booking</h1>
+                <p style="text-align: center;">Home // Booking</p>
+                <!-- <button class="cta-button">Get Started</button> -->
+            </div>
+        </section>
+        <div style="height: auto">
+            <!-- just to make scrolling effect possible -->
+                <h2 class="myH2" style="margin-bottom: 5vh; margin-top: 10vh;">Book Your Session</h2>
+                <!-- https://docs.google.com/forms/d/e/1FAIpQLSf08wHM4b21C-wtTRgB89LVFAcny1cHZn_RYysiJE50oRBeXw/viewform?usp=pp_url&entry.1528056957=Girish&entry.1142700763=8888000408&entry.638870488=PlayStation+5&entry.689686039=4&entry.836893696=2024-11-11&entry.785395629=12Am -->
+                 
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Logo, Description, and Contact Info -->
+            <div class="footer-column">
+                <img src="images/logo.png" alt="BONX Logo" class="logo">
+                <p style="font-size: 2rem; padding-bottom: 2vh;">Play, Connect, and Conquer at MARC GameLab!</p>
+                <div class="social-icons">
+                    <a href="tel:919921188501"><i class="fa-solid fa-phone"></i></a>
+                    <a href="mailto:marcgamelab@gmail.com"><i class="fa-regular fa-envelope"></i></i></a>
+                    <a href="https://www.instagram.com/marcgamelab?igsh=bnZnc3p2bjY3eGhm"><i class="fa-brands fa-instagram"></i></a>
+                    
+                    
+                    <!-- <a href="#"><img src="twitter-icon.png" alt="Twitter"></a> -->
+                </div>
+                
+            </div>
+
+            <!-- Column 2: Today's Winners and Content Links -->
+            <div class="footer-column">
+                <h1 style="margin-bottom: 5vh; font-size: 3rem;">Location</h1>
+                  <p><strong></strong><br> MARC Game Lab,<br>Opposite Ambe palace,<br>Kanwaram Chock, Station RD,<br>Ulhasnagar-3. 421003</p>
+        </div></div>
+        <div class="footer-bottom">
+            <p>© 2024 MARC GAME LAB Made with 💜 by <strong><a href="https://girishamarbudhrani.com/">MRGAB</a></strong></p>
+            <!-- <div class="footer-links">
+                <a href="#">Terms & Condition</a> || <a href="#">Privacy Policy</a>
+            </div> -->
+        </div>
+    </footer>
+          
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>
+</html>

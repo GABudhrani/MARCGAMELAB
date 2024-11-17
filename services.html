@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Game Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- <link rel="script" href="js/style.js"> -->
+</head>
+<style>
+    /* General Reset */
+    .responsive-container {
+        
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 1em; /* Space between image and text */
+  margin: 5em auto; /* Center the container itself */
+  max-width: 80%; /* Constrain width for larger screens */
+  width: auto; /* Allow the content to define the width */
+}
+
+/* Ensure image scales properly */
+.responsive-image {
+  max-width: 100%; /* Prevent image overflow */
+  width: 20vw; /* Fixed width for demonstration */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text container styling */
+.responsive-text {
+    font-size: 1.5rem;
+  flex: 1; /* Allow text to grow and take up remaining space */
+  text-align: center; /* Center text horizontally */
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+  .responsive-container {
+    flex-direction: column; /* Stack image above text */
+    align-items: center; /* Center items vertically for smaller screens */
+    text-align: center; /* Center text for better readability */
+  }
+
+  .responsive-image {
+    margin-bottom: 1em; /* Add spacing between image and text */
+    width: 100%; /* Allow the image to span the width of the container */
+    max-width: 300px; /* Optional: Limit max-width for smaller screens */
+  }
+
+  .responsive-text {
+    text-align: center; /* Center text in smaller screens */
+  }
+}
+
+
+    table {
+  width: 80%;
+  width: min(900px, 100%-3rem);
+  margin-inline: auto;
+  border-collapse: collapse;
+  border-spacing: 2rem;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+
+  th,
+  td,
+  caption {
+    padding: 1rem;
+  }
+
+  th {
+    font-size: 2rem;
+    &:nth-child(1) {
+      background: #fffaee;
+      border-radius: 20px 0 0 0;
+      border-right: 7px solid #fff;
+    }
+    &:nth-child(2) {
+      background: #e5f4fb;
+    }
+    &:nth-child(3) {
+      background: #e5f4fb;
+    }
+    &:nth-child(4) {
+      background: #e3f4df;
+      border-radius: 0 20px 0 0;
+      border-left: 7px solid #fff;
+    }
+  }
+  td {
+    border-bottom: 2px dashed #eeeded;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #686868;
+  }
+  tr:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
+  col:nth-child(2) {
+    background: #f4feff;
+  }
+  col:nth-child(3) {
+    background: #f4feff;
+  }
+}
+caption,
+th,
+td {
+  text-align: center;
+}
+
+
+@media (max-width: 650px) {
+  td {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 2rem;
+  }
+  td:first-child {
+    padding-top: 2rem;
+  }
+  td:last-child {
+    padding-top: 2rem;
+  }
+  th {
+    display: none;
+  }
+  td::before {
+    content: attr(data-cell);
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+  }
+
+  td:nth-of-type(1)::before {
+    background: #e3f4df;
+  }
+  td:nth-of-type(2)::before {
+    background: #e5f4fb;
+  }
+  td:nth-of-type(3)::before {
+    background: #e5f4fb;
+  }
+  td:nth-of-type(4)::before {
+    content: attr(data-cell);
+    background: #fffaee;
+  }
+}
+
+</style>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo" style="height: 10vh; width: auto;">
+                </a>
+            </div>
+            
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="services">
+            <div class="content_home">
+                <h1 style="text-align: center;">About Us</h1>
+                <p style="text-align: center;">Home // Services</p>
+                <!-- <button class="cta-button">Get Started</button> -->
+            </div>
+        </section>
+        <div style="height: auto">
+            <!-- just to make scrolling effect possible -->
+                <h2 class="myH2" style="margin-bottom: 5vh; margin-top: 10vh;">About MARC GameLab</h2>
+                <div class="table-container">
+                    <table>
+                      <caption>
+                        <h1 style="font-size: 2.5rem;"> Gaming Sessions Charges</h1>
+                      </caption>
+                      <col>
+                      <col>
+                      <col>
+                      <thead>
+                        <tr>
+                          <th>Console</th>
+                          <th>Remote</th>
+                          <th>Per Hour (INR)</th>
+                          <th>Per Head (INR)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-cell="Console" rowspan="4">PS5 </td>
+                          <td data-cell="Remote">1 </td>
+                          <td data-cell="Per Hour (INR)">100</td>
+                          <td data-cell="Per Head (INR)">100</td>
+                        </tr>
+                        <tr>
+                          <!-- <td data-cell="before">4.3 </td> -->
+                          <td data-cell="Remote">2 </td>
+                          <td data-cell="Per Hour (INR)">180 </td>
+                          <td data-cell="Per Head (INR)">90</td>
+                        </tr>
+                        <tr>
+                          <!-- <td data-cell="before">Often an empty chair</td> -->
+                          <td data-cell="Remote">3</td>
+                          <td data-cell="Per Hour (INR)">270</td>
+                          <td data-cell="Per Head (INR)">90</td>
+                        </tr>
+                        <tr>
+                          <!-- <td data-cell="before">Unresolved/ Delayed Response </td> -->
+                          <td data-cell="Remote">4</td>
+                          <td data-cell="Per Hour (INR)">320</td>
+                          <td data-cell="Per Head (INR)">80</td>
+                        </tr>
+                        
+
+                        <tr>
+                            <td data-cell="Console" rowspan="4">PS4 </td>
+                            <td data-cell="Remote">1 </td>
+                            <td data-cell="Per Hour (INR)">70</td>
+                            <td data-cell="Per Head (INR)">70</td>
+                          </tr>
+                          <tr>
+                            <!-- <td data-cell="before">4.3 </td> -->
+                            <td data-cell="Remote">2 </td>
+                            <td data-cell="Per Hour (INR)">120 </td>
+                            <td data-cell="Per Head (INR)">60</td>
+                          </tr>
+                          <tr>
+                            <!-- <td data-cell="before">Often an empty chair</td> -->
+                            <td data-cell="Remote">3</td>
+                            <td data-cell="Per Hour (INR)">180</td>
+                            <td data-cell="Per Head (INR)">60</td>
+                          </tr>
+                          <tr>
+                            <!-- <td data-cell="before">Unresolved/ Delayed Response </td> -->
+                            <td data-cell="Remote">4</td>
+                            <td data-cell="Per Hour (INR)">200</td>
+                            <td data-cell="Per Head (INR)">50</td>
+                          </tr>
+
+                          <tr>
+                            <td data-cell="Console" rowspan="4">PS2 </td>
+                            <td data-cell="Remote">1 </td>
+                            <td data-cell="Per Hour (INR)">50</td>
+                            <td data-cell="Per Head (INR)">50</td>
+                          </tr>
+                          <tr>
+                            <!-- <td data-cell="before">4.3 </td> -->
+                            <td data-cell="Remote">2 </td>
+                            <td data-cell="Per Hour (INR)">80 </td>
+                            <td data-cell="Per Head (INR)">40</td>
+                          </tr>
+                          <tr>
+                            <!-- <td data-cell="before">Often an empty chair</td> -->
+                            <td data-cell="Remote">3</td>
+                            <td data-cell="Per Hour (INR)">120</td>
+                            <td data-cell="Per Head (INR)">40</td>
+                          </tr>
+                          <tr>
+                            <!-- <td data-cell="before">Unresolved/ Delayed Response </td> -->
+                            <td data-cell="Remote">4</td>
+                            <td data-cell="Per Hour (INR)">120</td>
+                            <td data-cell="Per Head (INR)">30</td>
+                          </tr>
+
+                        
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  <h2 class="myH2" style="margin-bottom: 5vh; margin-top: 10vh;font-size: 2.5rem;">Our Services
+                </h2>
+                  <div class="responsive-container">
+                    <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+                    <div class="responsive-text">
+                      <h2>Responsive Layout</h2>
+                      <p>
+                        This is an example of a responsive layout where the image and text adjust
+                        based on screen size.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="responsive-container">
+                    <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+                    <div class="responsive-text">
+                      <h2>Responsive Layout</h2>
+                      <p>
+                        This is an example of a responsive layout where the image and text adjust
+                        based on screen size.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="responsive-container">
+                    <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+                    <div class="responsive-text">
+                      <h2>Responsive Layout</h2>
+                      <p>
+                        This is an example of a responsive layout where the image and text adjust
+                        based on screen size.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="responsive-container">
+                    <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+                    <div class="responsive-text">
+                      <h2>Responsive Layout</h2>
+                      <p>
+                        This is an example of a responsive layout where the image and text adjust
+                        based on screen size.
+                      </p>
+                    </div>
+                  </div>
+                  
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Logo, Description, and Contact Info -->
+            <div class="footer-column">
+                <img src="images/logo.png" alt="BONX Logo" class="logo">
+                <p style="font-size: 2rem; padding-bottom: 2vh;">Play, Connect, and Conquer at MARC GameLab!</p>
+                <div class="social-icons">
+                    <a href="tel:919921188501"><i class="fa-solid fa-phone"></i></a>
+                    <a href="mailto:marcgamelab@gmail.com"><i class="fa-regular fa-envelope"></i></i></a>
+                    <a href="https://www.instagram.com/marcgamelab?igsh=bnZnc3p2bjY3eGhm"><i class="fa-brands fa-instagram"></i></a>
+                    
+                    
+                    <!-- <a href="#"><img src="twitter-icon.png" alt="Twitter"></a> -->
+                </div>
+                
+            </div>
+
+            <!-- Column 2: Today's Winners and Content Links -->
+            <div class="footer-column">
+                <h1 style="margin-bottom: 5vh; font-size: 3rem;">Location</h1>
+                  <p><strong></strong><br> MARC Game Lab,<br>Opposite Ambe palace,<br>Kanwaram Chock, Station RD,<br>Ulhasnagar-3. 421003</p>
+        </div></div>
+        <div class="footer-bottom">
+            <p>© 2024 MARC GAME LAB Made with 💜 by <strong><a href="https://girishamarbudhrani.com/">MRGAB</a></strong></p>
+            <!-- <div class="footer-links">
+                <a href="#">Terms & Condition</a> || <a href="#">Privacy Policy</a>
+            </div> -->
+        </div>
+    </footer>
+          
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>
+</html>
