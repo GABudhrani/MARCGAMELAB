@@ -47,8 +47,62 @@
         <div style="height: auto">
             <!-- just to make scrolling effect possible -->
                 <h2 class="myH2" style="margin-bottom: 5vh; margin-top: 10vh;">Book Your Session</h2>
-                <!-- https://docs.google.com/forms/d/e/1FAIpQLSf08wHM4b21C-wtTRgB89LVFAcny1cHZn_RYysiJE50oRBeXw/viewform?usp=pp_url&entry.1528056957=Girish&entry.1142700763=8888000408&entry.638870488=PlayStation+5&entry.689686039=4&entry.836893696=2024-11-11&entry.785395629=12Am -->
-                 
+                <!-- https://docs.google.com/forms/d/e/1FAIpQLSf08wHM4b21C-wtTRgB89LVFAcny1cHZn_RYysiJE50oRBeXw/viewform?usp=pp_url&
+                 entry.1528056957=Girish&
+                 entry.1142700763=888888888&
+                 entry.638870488=3&
+                 entry.689686039=2&
+                 entry.836893696=2024-11-12&
+                 entry.785395629=222 -->
+                <div class="login-box">
+                    <!-- <h2>Login</h2> -->
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSf08wHM4b21C-wtTRgB89LVFAcny1cHZn_RYysiJE50oRBeXw/formResponse">
+                      <div class="user-box">
+                        <input type="text" name="entry.1528056957" required="">
+                        <label>name</label>
+                      </div>
+                      <div class="user-box">
+                        <input type="number" name="entry.1142700763" required="">
+                        <label>Number</label>
+                      </div>
+                      <div class="user-box">
+                        <select name="entry.638870488" required="">
+                          <option value="" disabled selected>Select Console</option>
+                          <option value="PlayStation 5">PS5</option>
+                          <option value="PlayStation 4">PS4</option>
+                          <option value="PlayStation 2">PS2</option>
+                        </select>
+                        <!-- <label>Console</label> -->
+                      </div>
+                      <div class="user-box">
+                        <select name="entry.689686039" required="">
+                          <option value="" disabled selected>Select Persons</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                        <!-- <label>Persons</label> -->
+                      </div>
+                      <div class="user-box">
+                        <input type="date" id="date-picker" name="entry.836893696" required>
+                        <!-- <label>Date</label> -->
+                      </div>
+                      <div class="user-box">
+                        <input type="time" name="entry.785395629"  required>
+                        <!-- <label>Time</label> -->
+                      </div>
+                      
+                      
+                        
+                        <button type="submit" class="custom-button">
+                            <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>submit</button>
+                      
+                    </form>
+                  </div>
         </div>
 
     </main>
@@ -88,6 +142,9 @@
 
 <!-- Function used to shrink nav bar removing paddings and adding black background -->
     <script>
+        const today = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+  document.getElementById('date-picker').setAttribute('min', today);
+
         $(window).scroll(function() {
             if ($(document).scrollTop() > 50) {
                 $('.nav').addClass('affix');
