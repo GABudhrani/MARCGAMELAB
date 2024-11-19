@@ -6,8 +6,60 @@
     <title>Marc Game Lab</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css"> -->
     <!-- <link rel="script" href="js/style.js"> -->
+     <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato);
+
+
+
+        .responsive-container {
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        gap: 1em; /* Space between image and text */
+        margin: 5em auto; /* Center the container itself */
+        max-width: 80%; /* Constrain width for larger screens */
+        width: auto; /* Allow the content to define the width */
+      }
+      
+      /* Ensure image scales properly */
+      .responsive-image {
+        max-width: 100%; /* Prevent image overflow */
+        width: 20vw; /* Fixed width for demonstration */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      
+      /* Text container styling */
+      .responsive-text {
+          font-size: 1.5rem;
+        flex: 1; /* Allow text to grow and take up remaining space */
+        text-align: center; /* Center text horizontally */
+      }
+      
+      /* Responsive Styles for smaller screens */
+      @media (max-width: 768px) {
+        .responsive-container {
+          flex-direction: column; /* Stack image above text */
+          align-items: center; /* Center items vertically for smaller screens */
+          text-align: center; /* Center text for better readability */
+        }
+      
+        .responsive-image {
+          margin-bottom: 1em; /* Add spacing between image and text */
+          width: 100%; /* Allow the image to span the width of the container */
+          max-width: 300px; /* Optional: Limit max-width for smaller screens */
+        }
+      
+        .responsive-text {
+          text-align: center; /* Center text in smaller screens */
+        }
+      }
+     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -45,83 +97,95 @@
                 <!-- <button class="cta-button">Get Started</button> -->
             </div>
         </section>
-        <div style="height: auto">
-            <!-- just to make scrolling effect possible -->
-                <h2 class="myH2" style="margin-bottom: 5vh; margin-top: 10vh;">About MARC GameLab</h2>
-                <div class="container my-5">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <img class="w-100 shadow" style="border-radius: 10%;" src="https://via.placeholder.com/824x552" />
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="p-5 mt-4">
-                            <h1 class="display-4">Our Story</h1>
-                            <p class="lead">MARC GameLab was founded in 2024 with a passion for gaming and a vision to create a premier gaming destination. Our mission is to provide an unparalleled gaming experience, where gamers can connect, compete, and enjoy their favorite titles in a comfortable environment.</p>
-                            <br>
-                            <h1 class="display-4">Why MARC GameLab?</h1>
-                            <p class="lead">As a sub-brand of the MARC group, we are committed to excellence. Customers choose us for our:
-                                <ul>
-                                    <li>Latest gaming consoles and accessories.</li>
-                                    <li>Welcoming and social atmosphere.</li>
-                                    <li>Affordable rates and flexible booking options.</li>
-                                    <li>Friendly and knowledgeable staff ready to assist you</li>
-                                </ul></p>
-                            <!-- <a href="#" class="btn btn-outline-dark">Read More</a> -->
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="container my-5">
-                    <div class="row">
-                      
-                      <div class="col-lg-6">
-                        <div class="p-5 mt-4">
-                            <h1 class="display-4">Timings!</h1>
-                            <p class="lead"> Our opening hours are:
-                                <ul>
-                                    <li>Monday to Friday: 10 AM - 11 PM</li>
-                                    <li>Saturday and Sunday: 10 AM - 12 AM</li>
-                                </ul>
-                            </p>
-                            <br>
-                            <h1 class="display-4">Who Can Enjoy MARC GameLab?</h1>
-                            <p class="lead">Our gaming center is open to everyone—from casual gamers to competitive players. Whether you're looking to unwind after a long day or compete in a tournament, we welcome all gaming enthusiasts!</p>
-                            <!-- <a href="#" class="btn btn-outline-dark">Read More</a> -->
-                          </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <img class="w-100 shadow" style="border-radius: 10%;" src="https://via.placeholder.com/824x552" />
-                      </div>
-                  </div>
-                </div>
-                <div class="container my-5">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <img class="w-100 shadow" style="border-radius: 10%;" src="https://via.placeholder.com/824x552" />
-                          </div>
-                      <div class="col-lg-6">
-                        <div class="p-5 mt-4">
-                            <h1 class="display-4">Available Games!</h1>
-                            <p class="lead"> We offer a wide range of games across various genres, including:
-                                <ul>
-                                    <li>Action and Adventure</li>
-                                    <li>RPGs (Role-Playing Games)</li>
-                                    <li>Sports Games</li>
-                                    <li>Racing Games</li>
-                                    <li>Multiplayer Online Battle Arena (MOBA)</li>
-                                    <li>And much more!</li>
-                                </ul>
-                            </p>
-                            <!-- <br>
-                            <h1 class="display-4">Who Can Enjoy MARC GameLab?</h1>
-                            <p class="lead">Our gaming center is open to everyone—from casual gamers to competitive players. Whether you're looking to unwind after a long day or compete in a tournament, we welcome all gaming enthusiasts!</p>
-                            <a href="#" class="btn btn-outline-dark">Read More</a> -->
-                          </div>
-                      </div>
-                      
-                  </div>
-                </div>
+        <h2 class="myH2" style="margin-bottom: 5vh; margin-top: 10vh;font-size: 2.5rem;">Our Services
+        </h2>
+          <div class="responsive-container">
+            <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+            <div class="responsive-text">
+              <h2>Our Story</h2>
+              <p>
+                MARC GameLab was founded in 2024 with a passion for gaming and a vision to create a premier gaming destination. Our mission is to provide an unparalleled gaming experience, where gamers can connect, compete, and enjoy their favorite titles in a comfortable environment.
+              </p>
             </div>
+          </div>
+          <div class="responsive-container">
+            
+            <div class="responsive-text">
+              <h2>Why MARC GameLab?</h2>
+              <p>
+                As a brand of the MARC group, we are committed to excellence. Customers choose us for our:
+                <div class="allmypeoples">
+                    <ul id="allmypeoples">
+                        <li>Latest gaming consoles and accessories.</li>
+                        <li>Welcoming and social atmosphere.</li>
+                        <li>Affordable rates and flexible booking options.</li>
+                        <li>Friendly and knowledgeable staff ready to assist you.</li>
+                      </ul>
+                </div>
+                
+              </p>
+            </div>
+            <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+          </div>
+          <div class="responsive-container">
+            <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+            <div class="responsive-text">
+              <h2>Location & Timings</h2>
+              <p>
+                We are located in the heart of the city, easily accessible for all gaming enthusiasts. Our opening hours are:
+                <div class="allmypeoples">
+                    <ul id="allmypeoples">
+                    <li>Monday to Sunday: 10 AM - 12 AM</li>
+                    
+                  </ul></div>
+              </p>
+            </div>
+          </div>
+          
+          <div class="responsive-container">
+            <div class="responsive-text">
+              <h2>Our Goals</h2>
+              <p>
+                Our primary goals include:
+                <div class="allmypeoples">
+                    <ul id="allmypeoples">
+                    <li>Providing a safe and inclusive space for gamers of all ages.</li>
+                    <li>Encouraging social interaction and community building through gaming.</li>
+                    <li>Regularly hosting tournaments and events to engage our customers.</li>
+                  </ul></div>
+              </p>
+            </div>
+            <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+          </div>
+          <div class="responsive-container">
+            <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+            <div class="responsive-text">
+              <h2>Who Can Enjoy MARC GameLab?</h2>
+              <p>
+                Our gaming center is open to everyone—from casual gamers to competitive players. Whether you're looking to unwind after a long day or compete in a tournament, we welcome all gaming enthusiasts!
+              </p>
+            </div>
+            
+          </div>
+          <div class="responsive-container">
+            <div class="responsive-text">
+              <h2>Available Games</h2>
+              <p>
+                We offer a wide range of games across various genres, including:
+                <div class="allmypeoples">
+                    <ul id="allmypeoples">
+                    <li>Action and Adventure</li>
+                    <li>RPGs (Role-Playing Games)</li>
+                    <li>Sports Games</li>
+                    <li>Racing Games</li>
+                    <li>Multiplayer Online Battle Arena (MOBA)</li>
+                    <li>And much more!</li>
+                  </ul></div>
+              </p>
+            </div>
+            <img src="https://via.placeholder.com/150" alt="Example Image" class="responsive-image">
+          </div>
+          
 
     </main>
     <footer class="footer">
@@ -138,6 +202,7 @@
                     
                     <!-- <a href="#"><img src="twitter-icon.png" alt="Twitter"></a> -->
                 </div>
+                
                 
             </div>
 
