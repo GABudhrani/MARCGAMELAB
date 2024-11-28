@@ -33,6 +33,7 @@
 
 /* Text container styling */
 .responsive-text {
+  color: #ffffff;
     font-size: 1.5rem;
   flex: 1; /* Allow text to grow and take up remaining space */
   text-align: center; /* Center text horizontally */
@@ -74,6 +75,7 @@
   }
 
   th {
+    color: #686868;
     font-size: 2rem;
     &:nth-child(1) {
       background: #fffaee;
@@ -83,10 +85,10 @@
     &:nth-child(2) {
       background: #e5f4fb;
     }
-    &:nth-child(3) {
+    /* &:nth-child(3) {
       background: #e5f4fb;
-    }
-    &:nth-child(4) {
+    } */
+    &:nth-child(3) {
       background: #e3f4df;
       border-radius: 0 20px 0 0;
       border-left: 7px solid #fff;
@@ -96,7 +98,7 @@
     border-bottom: 2px dashed #eeeded;
     font-weight: 400;
     font-size: 2rem;
-    color: #686868;
+    color: #fff;
   }
   tr:last-child {
     td {
@@ -106,9 +108,9 @@
   col:nth-child(2) {
     background: #f4feff;
   }
-  col:nth-child(3) {
+  /* col:nth-child(3) {
     background: #f4feff;
-  }
+  } */
 }
 caption,
 th,
@@ -142,15 +144,19 @@ td {
   }
 
   td:nth-of-type(1)::before {
+    color: #686868;
     background: #e3f4df;
   }
   td:nth-of-type(2)::before {
+    color: #686868;
     background: #e5f4fb;
   }
   td:nth-of-type(3)::before {
+    color: #686868;
     background: #e5f4fb;
   }
   td:nth-of-type(4)::before {
+    color: #686868;
     content: attr(data-cell);
     background: #fffaee;
   }
@@ -199,7 +205,7 @@ td {
                 <div class="table-container">
                     <table>
                       <caption>
-                        <h1 style="font-size: 2.5rem;"> Gaming Sessions Charges</h1>
+                        <h1 style="font-size: 2.5rem; color: #ffffff;"> Gaming Sessions Charges</h1>
                       </caption>
                       <col>
                       <col>
@@ -209,7 +215,7 @@ td {
                           <th>Console</th>
                           <th>Remote</th>
                           <th>Per Hour (INR)</th>
-                          <th>Per Head (INR)</th>
+                          <!-- <th>Per Head (INR)</th> -->
                         </tr>
                       </thead>
                       <tbody>
@@ -217,25 +223,25 @@ td {
                           <td data-cell="Console" rowspan="4">PS5 </td>
                           <td data-cell="Remote">1 </td>
                           <td data-cell="Per Hour (INR)">100</td>
-                          <td data-cell="Per Head (INR)">100</td>
+                          <!-- <td data-cell="Per Head (INR)">100</td> -->
                         </tr>
                         <tr>
                           <!-- <td data-cell="before">4.3 </td> -->
                           <td data-cell="Remote">2 </td>
                           <td data-cell="Per Hour (INR)">180 </td>
-                          <td data-cell="Per Head (INR)">90</td>
+                          <!-- <td data-cell="Per Head (INR)">90</td> -->
                         </tr>
                         <tr>
                           <!-- <td data-cell="before">Often an empty chair</td> -->
                           <td data-cell="Remote">3</td>
                           <td data-cell="Per Hour (INR)">270</td>
-                          <td data-cell="Per Head (INR)">90</td>
+                          <!-- <td data-cell="Per Head (INR)">90</td> -->
                         </tr>
                         <tr>
                           <!-- <td data-cell="before">Unresolved/ Delayed Response </td> -->
                           <td data-cell="Remote">4</td>
                           <td data-cell="Per Hour (INR)">320</td>
-                          <td data-cell="Per Head (INR)">80</td>
+                          <!-- <td data-cell="Per Head (INR)">80</td> -->
                         </tr>
                         
 
@@ -243,50 +249,50 @@ td {
                             <td data-cell="Console" rowspan="4">PS4 </td>
                             <td data-cell="Remote">1 </td>
                             <td data-cell="Per Hour (INR)">70</td>
-                            <td data-cell="Per Head (INR)">70</td>
+                            <!-- <td data-cell="Per Head (INR)">70</td> -->
                           </tr>
                           <tr>
                             <!-- <td data-cell="before">4.3 </td> -->
                             <td data-cell="Remote">2 </td>
                             <td data-cell="Per Hour (INR)">120 </td>
-                            <td data-cell="Per Head (INR)">60</td>
+                            <!-- <td data-cell="Per Head (INR)">60</td> -->
                           </tr>
                           <tr>
                             <!-- <td data-cell="before">Often an empty chair</td> -->
                             <td data-cell="Remote">3</td>
                             <td data-cell="Per Hour (INR)">180</td>
-                            <td data-cell="Per Head (INR)">60</td>
+                            <!-- <td data-cell="Per Head (INR)">60</td> -->
                           </tr>
                           <tr>
                             <!-- <td data-cell="before">Unresolved/ Delayed Response </td> -->
                             <td data-cell="Remote">4</td>
                             <td data-cell="Per Hour (INR)">200</td>
-                            <td data-cell="Per Head (INR)">50</td>
+                            <!-- <td data-cell="Per Head (INR)">50</td> -->
                           </tr>
 
                           <tr>
                             <td data-cell="Console" rowspan="4">PS2 </td>
                             <td data-cell="Remote">1 </td>
                             <td data-cell="Per Hour (INR)">50</td>
-                            <td data-cell="Per Head (INR)">50</td>
+                            <!-- <td data-cell="Per Head (INR)">50</td> -->
                           </tr>
                           <tr>
                             <!-- <td data-cell="before">4.3 </td> -->
                             <td data-cell="Remote">2 </td>
                             <td data-cell="Per Hour (INR)">80 </td>
-                            <td data-cell="Per Head (INR)">40</td>
+                            <!-- <td data-cell="Per Head (INR)">40</td> -->
                           </tr>
                           <tr>
                             <!-- <td data-cell="before">Often an empty chair</td> -->
                             <td data-cell="Remote">3</td>
                             <td data-cell="Per Hour (INR)">120</td>
-                            <td data-cell="Per Head (INR)">40</td>
+                            <!-- <td data-cell="Per Head (INR)">40</td> -->
                           </tr>
                           <tr>
                             <!-- <td data-cell="before">Unresolved/ Delayed Response </td> -->
                             <td data-cell="Remote">4</td>
                             <td data-cell="Per Hour (INR)">120</td>
-                            <td data-cell="Per Head (INR)">30</td>
+                            <!-- <td data-cell="Per Head (INR)">30</td> -->
                           </tr>
 
                         

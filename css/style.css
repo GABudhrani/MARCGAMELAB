@@ -695,6 +695,16 @@ body {
     color: #6784ff;
     font-size: 0.9rem;
   }
+  .features img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Add rounded corners for a polished look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+    display: block; /* Remove inline spacing issues */
+    margin: 0 auto; /* Center the image */
+    object-fit: cover; /* Ensure the image fills the space proportionally */
+  }
+  
 
   .cta-button-tab {
     width: 100%;
@@ -1398,6 +1408,15 @@ position:absolute;
     font-size: 12px;
   }
   
+  /* .login-box .user-box input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .login-box .user-box label input[type="checkbox"] {
+    margin-right: 10px;
+  } */
+
   .login-box form button {
     position: relative;
     display: inline-block;
